@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29403.142
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smab.TagHelpers", "src\Smab.TagHelpers\Smab.TagHelpers.csproj", "{DA8821A5-FFF2-40DC-8596-70160005E920}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smab.TagHelpers.WebDemo", "src\Smab.TagHelpers.WebDemo\Smab.TagHelpers.WebDemo.csproj", "{6613542E-5CDF-4CF2-9AEB-542EE58AEABF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8BDD654B-E96F-4A10-B60F-527069B9915C}"
+	ProjectSection(SolutionItems) = preProject
+		nuget.txt = nuget.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA8821A5-FFF2-40DC-8596-70160005E920}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA8821A5-FFF2-40DC-8596-70160005E920}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA8821A5-FFF2-40DC-8596-70160005E920}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA8821A5-FFF2-40DC-8596-70160005E920}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6613542E-5CDF-4CF2-9AEB-542EE58AEABF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6613542E-5CDF-4CF2-9AEB-542EE58AEABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6613542E-5CDF-4CF2-9AEB-542EE58AEABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6613542E-5CDF-4CF2-9AEB-542EE58AEABF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8E66C594-8EE0-4607-8113-E86CA0C5785F}
+	EndGlobalSection
+EndGlobal

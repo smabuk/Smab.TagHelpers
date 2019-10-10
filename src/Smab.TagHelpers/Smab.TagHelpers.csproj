@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RazorLangVersion>3.0</RazorLangVersion>
+    <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
+    <TieredCompilation>true</TieredCompilation>
+    <LangVersion>8.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>Smab.TagHelpers</PackageId>
+    <Title>Smab.TagHelpers</Title>
+    <AssemblyName>Smab.TagHelpers</AssemblyName>
+    <Product>Smab.TagHelpers</Product>
+    <RootNamespace>Smab.TagHelpers</RootNamespace>
+    <Authors>Simon Brookes (@smabuk)</Authors>
+    <Company></Company>
+    <Description>A collection of ASP.NET Core tag helpers</Description>
+    <Copyright>© 2017-2019 Simon Brookes</Copyright>
+    <Summary>Shared TagHelpers for Versions and FontAwesome etc.</Summary>
+    <PackageProjectUrl>https://github.com/smabuk/Smab.TagHelpers</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/smabuk/Smab.TagHelpers</RepositoryUrl>
+    <PackageTags>asp.net core, versions, library, fontawesome</PackageTags>
+    <PackageReleaseNotes>New for ASPNet Core 3.0</PackageReleaseNotes>
+    <VersionPrefix>1.2.0</VersionPrefix>
+    <Preview></Preview>
+    <VersionSuffix Condition="'$(Preview)' != ''">$(Preview).$([System.DateTime]::get_Now().get_Year())$([System.DateTime]::get_Now().get_Month().ToString("D2"))$([System.DateTime]::get_Now().get_Day().ToString("D2"))-$([System.DateTime]::get_Now().get_Hour().ToString("D2"))$([System.DateTime]::get_Now().get_Minute().ToString("D2"))</VersionSuffix>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor" Version="2.2.0" />
+  </ItemGroup>
+
+</Project>

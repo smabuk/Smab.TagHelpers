@@ -1,0 +1,151 @@
+﻿@page
+@model IndexModel
+@addTagHelper *, Smab.TagHelpers
+@{
+    ViewData["Title"] = "My TagHelpers";
+}
+
+<h2>My TagHelpers from Smab.TagHelpers</h2>
+
+<div class="container-fluid">
+    <div class="card">
+        <h2 class="card-header">Font Awesome</h2>
+        <div class="">
+            <div class="card">
+                <h5 class="card-header">font-awesome</h5>
+                <div class="card-body">
+                    <fa icon="envelope" /> should appear as: <i class="fas fa-envelope"></i>
+                    <code>
+                        &lt;font-awesome icon="envelope" /&gt;
+                    </code>
+                    <br />
+                    <font-awesome icon="envelope" /> should appear as: <i class="fas fa-envelope"></i>
+                    <code>
+                        &lt;font-awesome icon="envelope" /&gt;
+                    </code>
+                    <br />
+                    <font-awesome icon="envelope" type="Regular" /> should appear as: <i class="far fa-envelope"></i>
+                    <code>
+                        &lt;font-awesome icon="envelope" type="Regular" /&gt;
+                    </code>
+                    <br />
+                    <font-awesome icon="envelope" class="text-primary" /> should appear as: <i class="fas fa-envelope text-primary"></i>
+                    <code>
+                        &lt;font-awesome icon="envelope" class="text-primary" /&gt;
+                    </code>
+                    <br />
+                    <font-awesome size="lg">&#xf2bb</font-awesome> should appear as: <i class="fas fa-address-card fa-lg"></i>
+                    <code>
+                        &lt;font-awesome size="lg" /&gt;&amp;#xf2bb&lt;font-awesome/&gt;  // Pasted from <a href="https://fontawesome.com/cheatsheet" target="_blank">https://fontawesome.com/cheatsheet</a>
+                    </code>
+                    <br />
+                    <font-awesome icon="envelope" size="2" /> should appear as: <i class="fas fa-envelope fa-2x"></i>
+                    <code>
+                        &lt;font-awesome icon="envelope" size="2" /&gt;
+                    </code>
+                    <br />
+                    <font-awesome icon="hand-rock" type="Regular" />
+                    <font-awesome icon="hand-paper" type="Regular" />
+                    <font-awesome icon="hand-scissors" type="Regular" />
+                    <font-awesome icon="hand-lizard" type="Regular" />
+                    <font-awesome icon="hand-spock" type="Regular" />
+                    <code>
+                        Rock, Paper, Scissors, Lizard, Spock !!!
+                    </code>
+                </div>
+            </div>
+            <div class="card">
+                <h5 class="card-header">font-awesome-custom</h5>
+                <div class="card-body">
+                    <font-awesome-custom name="calendar-date" size="4" date="DateTime.UtcNow" />
+                    <font-awesome-custom name="calendar-date" size="4" date="new DateTime(2018, 9, 30, 0, 0, 0)" type="Regular" />
+                    @*<font-awesome-custom name="calendar-date" size="4" date="DateTime.Now.AddDays(90)" type="Light" />*@
+                    <font-awesome-custom name="today" size="4" style="color: #691238" />
+                    <br />
+                    <code>
+                        &lt;font-awesome-custom name="calendar" date="DateTime.UtcNow" /&gt;
+                    </code>
+                    <br />
+                    <code>
+                        &lt;font-awesome-custom name="calendar" date="new DateTime(2018,9,30,0,0,0)" type="Regular" /&gt;
+                    </code>
+                    <br />
+                    @*<code>
+                            &lt;font-awesome-custom name="calendar" date="DateTime.Now.AddDays(90)" type="Light" /&gt;
+                        </code>
+                        <br />*@
+                    <code>
+                        &lt;font-awesome-custom name="today" style="color: #691238" /&gt;
+                    </code>
+                    <br />
+                    <font-awesome-custom name="counter" icon="envelope" size="4" position="TopRight">327</font-awesome-custom>
+                    <br />
+                    <code>
+                        &lt;font-awesome-custom name="counter" icon="envelope" position="TopRight"&gt;327&lt;/font-awesome-custom&gt;
+                    </code>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <h2 class="card-header">Conditional visibility</h2>
+        <div class="card-body">
+            <code>
+                &lt;div <var>condition</var>="true"&gt;...&lt;/div&gt;
+            </code>
+            <span condition="true">This should be visible</span>
+            <br />
+            <code>
+                &lt;div <var>condition</var>="false"&gt;...&lt;/div&gt;
+            </code>
+            <span condition="false">This should be hidden</span>
+            <br />
+            <code>
+                &lt;div <var>hide</var>="false"&gt;...&lt;/div&gt;
+            </code>
+            <span hide="false">This should be visible</span>
+            <br />
+            <div>Date is @DateTime.UtcNow.Day ⇒ @(((DateTime.UtcNow.Day % 2) == 0) ? "Even" : "Odd") </div>
+            <code>
+                &lt;div <var>condition</var>="((DateTime.UtcNow.Day % 2) == 0)"&gt;...&lt;/div&gt;
+            </code>
+            <span condition="((DateTime.UtcNow.Day % 2) == 0)">This only shows if the date is even</span>
+            <br />
+            <code>
+                &lt;div <var>condition</var>="((DateTime.UtcNow.Day % 2) == 1)"&gt;...&lt;/div&gt;
+            </code>
+            <span condition="((DateTime.UtcNow.Day % 2) == 1)">This only shows if the date is odd</span>
+            <br />
+        </div>
+    </div>
+    <div class="card">
+        <h2 class="card-header">Version Information</h2>
+        <div class="card-body">
+            <code>
+                &lt;version /&gt;
+            </code>
+            <version>Library: </version>
+            <br />
+            <code>
+                &lt;version assembly="typeof(Program)" /&gt;
+            </code>
+            <version assembly="typeof(Program)">Site: </version>
+            <br />
+            <code>
+                &lt;version type="Location" /&gt;
+            </code>
+            <version type="Location" />
+            <br />
+            <code>
+                &lt;version type="Location" assembly="typeof(Program)" /&gt;
+            </code>
+            <version type="Location" assembly="typeof(Program)" />
+            <br />
+            <code>
+                &lt;assembly-info assembly="typeof(Program)" type="Copyright" /&gt;
+            </code>
+            <assembly-info assembly="typeof(Program)" type="Copyright" />
+            <br />
+        </div>
+    </div>
+</div>
