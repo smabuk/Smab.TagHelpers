@@ -33,7 +33,7 @@ namespace Smab.TagHelpers
         /// Assembly represents the type of the assembly to be versioned.
         /// </summary>
         [HtmlAttributeName("assembly")]
-        public System.Type AssemblyType { get; set; }
+        public System.Type? AssemblyType { get; set; }
 
         /// <summary>
         /// Type represents the type of version to be returned

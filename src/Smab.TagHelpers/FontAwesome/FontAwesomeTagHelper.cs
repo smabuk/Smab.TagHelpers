@@ -13,11 +13,11 @@ namespace Smab.TagHelpers
     [HtmlTargetElement("font-awesome")]
     public class FontAwesomeTagHelper : TagHelper
     {
-        /// <summary>
-        /// Font-awesome icon name without the style and fa-prefix
-        /// </summary>
-        [HtmlAttributeName("icon")]
-        public string Icon { get; set; }
+		/// <summary>
+		/// Font-awesome icon name without the style and fa-prefix
+		/// </summary>
+		[HtmlAttributeName("icon")]
+		public string Icon { get; set; } = "";
 
         /// <summary>
         /// Type represents the icon style to be used.
@@ -36,14 +36,14 @@ namespace Smab.TagHelpers
 		/// Specify either an integer or lg, sm, xs    
         /// </summary>
         [HtmlAttributeName("size")]
-        public string Size { get; set; }
+        public string Size { get; set; } = "";
 
-        [HtmlAttributeName("class")]
-        public string CssClass { get; set; }
+		[HtmlAttributeName("class")]
+        public string CssClass { get; set; } = "";
 
-        private string iconName;
-		private string faTypeString;
-		private TagHelperContent childContent;
+		private string iconName = "";
+		private string faTypeString = "";
+		private TagHelperContent? childContent;
 
         public override int Order => base.Order + 200;
 

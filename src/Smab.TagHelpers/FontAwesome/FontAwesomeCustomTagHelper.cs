@@ -18,15 +18,15 @@ namespace Smab.TagHelpers
         /// Name of the custom font-awesome mix-up to render
         /// </summary>
         [HtmlAttributeName("name")]
-        public string Name { get; set; }
+        public string Name { get; set; } = "";
 
-        /// <summary>
-        /// Font-awesome icon name without the style and fa-prefix
-        /// </summary>
-        [HtmlAttributeName("icon")]
-        public string Icon { get; set; }
+		/// <summary>
+		/// Font-awesome icon name without the style and fa-prefix
+		/// </summary>
+		[HtmlAttributeName("icon")]
+        public string Icon { get; set; } = "";
 
-        [HtmlAttributeName("date")]
+		[HtmlAttributeName("date")]
         public DateTimeOffset Date { get; set; }
 
         /// <summary>
@@ -51,14 +51,14 @@ namespace Smab.TagHelpers
         public FontAwesomePosition Position { get; set; } = FontAwesomePosition.TopRight;
 
         [HtmlAttributeName("value")]
-        public object Value { get; set; }
+        public object? Value { get; set; }
 
         [HtmlAttributeName("class")]
-        public string CssClass { get; set; }
+        public string CssClass { get; set; } = "";
 
-        private string iconName;
-        private string faTypeString;
-        private TagHelperContent childContent;
+		private string iconName = "";
+		private string faTypeString = "";
+		private TagHelperContent? childContent;
 
         public override int Order => base.Order;
 
